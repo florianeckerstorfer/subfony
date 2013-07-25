@@ -10,5 +10,9 @@
     {
         "caption": "Subfony: Cache Clear",
         "command": "subfony_cache_clear"
+    },
+    {
+        "caption": "Subfony: Generate Doctrine Entities",
+        "command": "subfony_doctrine_generate_entities"
     }
 ]
