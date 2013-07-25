@@ -10,6 +10,7 @@ class Pref:
         Pref.php_bin = settings.get('php_bin', '/usr/bin/php')
         Pref.console_bin = settings.get('console_bin', 'app/console')
         Pref.src_dir = settings.get('src_dir', 'src')
+        Pref.assets_install_symlink = settings.get('assets_install_symlink', False)
 
 
 st_version = 2
@@ -109,6 +110,45 @@ class SubfonyCacheClearCommand(SubfonyBase):
             return
 
         cmd = [Pref.php_bin, Pref.console_bin, 'cache:clear', '--no-interaction']
+        self.run_shell_command(cmd, cwd)
+
+
+class SubfonyCacheWarmupCommand(SubfonyBase):
+    def run(self):
+        self.view = self.window.active_view()
+        cwd = self.find_symfony2_dir()
+        if cwd == '/' or cwd == '':
+            sublime.status_message('You\'re not in a Symfony2 application.')
+            return
+
+        cmd = [Pref.php_bin, Pref.console_bin, 'cache:warmup', '--no-interaction']
+        self.run_shell_command(cmd, cwd)
+
+
+class SubfonyAsseticDumpCommand(SubfonyBase):
+    def run(self):
+        self.view = self.window.active_view()
+        cwd = self.find_symfony2_dir()
+        if cwd == '/' or cwd == '':
+            sublime.status_message('You\'re not in a Symfony2 application.')
+            return
+
+        cmd = [Pref.php_bin, Pref.console_bin, 'assetic:dump', '--no-interaction']
+        self.run_shell_command(cmd, cwd)
+
+
+class SubfonyAssetsInstallCommand(SubfonyBase):
+    def run(self):
+        self.view = self.window.active_view()
+        cwd = self.find_symfony2_dir()
+        if cwd == '/' or cwd == '':
+            sublime.status_message('You\'re not in a Symfony2 application.')
+            return
+
+        if Pref.assets_install_symlink == True:
+            cmd = [Pref.php_bin, Pref.console_bin, 'assets:install', '--symlink', '--no-interaction']
+        else:
+            cmd = [Pref.php_bin, Pref.console_bin, 'assets:install', '--no-interaction']
         self.run_shell_command(cmd, cwd)
 
 

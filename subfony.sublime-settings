@@ -8,5 +8,8 @@
     "console_bin": "app/console",
 
     // Directory in the Symfony2 root directory to store bundles in
-    "src_dir": "src"
+    "src_dir": "src",
+
+    // Run assets:install command with --symlink option
+    "assets_install_symlink": false
 }

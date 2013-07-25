@@ -12,7 +12,19 @@
         "command": "subfony_cache_clear"
     },
     {
+        "caption": "Subfony: Cache Warm up",
+        "command": "subfony_cache_warmup"
+    },
+    {
         "caption": "Subfony: Generate Doctrine Entities",
         "command": "subfony_doctrine_generate_entities"
+    },
+    {
+        "caption": "Subfony: Assetic Dump",
+        "command": "subfony_assetic_dump"
+    },
+    {
+        "caption": "Subfony: Assets Install",
+        "command": "subfony_assets_install"
     }
 ]
