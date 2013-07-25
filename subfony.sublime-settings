@@ -1,0 +1,12 @@
+{
+    // Plugin settings
+
+    // Path to the PHP executable
+    "php_bin": "/usr/bin/php",
+
+    // Path to the Symfony2 console executable (from the Symfony2 root directory)
+    "console_bin": "app/console",
+
+    // Directory in the Symfony2 root directory to store bundles in
+    "src_dir": "src"
+}
