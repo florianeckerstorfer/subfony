@@ -4,6 +4,15 @@ Subfony
 Subfony provides useful integrations for Symfony2 developers in Sublime Text. Developed by [Florian Eckerstorfer](http://florianeckerstorfer.com) in Vienna.
 
 
+Installation
+------------
+
+Navigate to your Sublime Text installations `Packages/` directory and clone this repository. For example, on OS X with Sublime Text 3:
+
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+    $ git clone https://github.com/florianeckerstorfer/subfony Subfony
+
+
 Commands
 --------
 
@@ -27,6 +36,7 @@ This list shows the commands supported by Subfony and the corresponding name in 
 - Subfony: Update Translation → `translation:update`
 - Subfony: Lint Twig → `twig:lint`
 
+
 Configuration
 -------------
 
@@ -36,6 +46,9 @@ Configuration
 
         // Path to the Symfony2 console executable (from the Symfony2 root directory)
         "subfony_console_bin": "app/console",
+
+        // Path to the Symfony2 AppKernel.php (used to detect if in Symfony2 project)
+        "subfony_app_kernel": "app/AppKernel.php",
 
         // Directory in the Symfony2 root directory to store bundles in
         "subfony_src_dir": "src",
@@ -67,9 +80,6 @@ Configuration
         // Format of translations (php, xlf, po, mo, yml, ts, csv, ini and res)
         "subfony_translation_format": "yml"
     }
-
-
-
 
 
 License
