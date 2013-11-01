@@ -16,6 +16,26 @@
         "command": "subfony_cache_warmup"
     },
     {
+        "caption": "Subfony: Doctrine Create Database",
+        "command": "subfony_doctrine_database_create"
+    },
+    {
+        "caption": "Subfony: Doctrine Drop Database",
+        "command": "subfony_doctrine_database_drop"
+    },
+    {
+        "caption": "Subfony: Doctrine Create Schema",
+        "command": "subfony_doctrine_schema_create"
+    },
+    {
+        "caption": "Subfony: Doctrine Drop Schema",
+        "command": "subfony_doctrine_schema_drop"
+    },
+    {
+        "caption": "Subfony: Doctrine Update Schema",
+        "command": "subfony_doctrine_schema_update"
+    },
+    {
         "caption": "Subfony: Generate Bundle",
         "command": "subfony_generate_bundle"
     },

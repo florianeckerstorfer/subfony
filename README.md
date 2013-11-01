@@ -13,6 +13,11 @@ This list shows the commands supported by Subfony and the corresponding name in 
 - Sbufony: Assets Install → `assets:install`
 - Subfony: Cache Clear → `cache:clear`
 - Subfony: Cache Warm up → `cache:warmup`
+- Subfony: Doctrine Create Database → `doctrine:database:create`
+- Subfony: Doctrine Drop Database → `doctrine:database:drop --force`
+- Subfony: Doctrine Create Schema → `doctrine:schema:create`
+- Subfony: Doctrine Drop Schema → `doctrine:schema:drop --force`
+- Subfony: Doctrine Update Schema → `doctrine:schema:update --force`
 - Subfony: Generate Bundle → `generate:bundle`
 - Subfony: Generate Controller → `generate:controller`
 - Subfony: Generate Doctrine CRUD → `generate:doctrine:crud`

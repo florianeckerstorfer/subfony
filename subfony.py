@@ -119,6 +119,46 @@ class SubfonyCacheWarmupCommand(SubfonyBase):
         self.run_shell_command(self.build_cmd(cmd), self.find_symfony2_dir())
 
 
+class SubfonyDoctrineDatabaseCreateCommand(SubfonyBase):
+    def run(self):
+        self.view = self.window.active_view()
+
+        cmd = ['doctrine:database:create']
+        self.run_shell_command(self.build_cmd(cmd), self.find_symfony2_dir())
+
+
+class SubfonyDoctrineDatabaseDropCommand(SubfonyBase):
+    def run(self):
+        self.view = self.window.active_view()
+
+        cmd = ['doctrine:database:drop', '--force']
+        self.run_shell_command(self.build_cmd(cmd), self.find_symfony2_dir())
+
+
+class SubfonyDoctrineSchemaCreateCommand(SubfonyBase):
+    def run(self):
+        self.view = self.window.active_view()
+
+        cmd = ['doctrine:schema:create']
+        self.run_shell_command(self.build_cmd(cmd), self.find_symfony2_dir())
+
+
+class SubfonyDoctrineSchemaDropCommand(SubfonyBase):
+    def run(self):
+        self.view = self.window.active_view()
+
+        cmd = ['doctrine:schema:drop', '--force']
+        self.run_shell_command(self.build_cmd(cmd), self.find_symfony2_dir())
+
+
+class SubfonyDoctrineSchemaUpdateCommand(SubfonyBase):
+    def run(self):
+        self.view = self.window.active_view()
+
+        cmd = ['doctrine:schema:update', '--force']
+        self.run_shell_command(self.build_cmd(cmd), self.find_symfony2_dir())
+
+
 class SubfonyGenerateBundleCommand(SubfonyInputBase):
     INPUT_PANEL_CAPTION = 'Namespace:'
 
