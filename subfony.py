@@ -11,6 +11,7 @@ class Pref:
 
         Pref.php_bin                = settings.get('subfony_php_bin')
         Pref.console_bin            = settings.get('subfony_console_bin')
+        Pref.app_kernel             = settings.get('subfony_app_kernel')
         Pref.src_dir                = settings.get('subfony_src_dir')
         Pref.assets_install_symlink = settings.get('subfony_assets_install_symlink')
         Pref.bundle_format          = settings.get('subfony_bundle_format')
@@ -65,7 +66,7 @@ class SubfonyBase(sublime_plugin.WindowCommand):
             sublime.status_message('A file must be open. Sorry.')
             return
         cwd = os.path.dirname(self.view.file_name())
-        while not os.path.exists(cwd + '/app') or cwd == '/' or cwd == '':
+        while not os.path.exists(cwd + '/' + Pref.app_kernel) and cwd != '/' and cwd != '':
             cwd = os.path.dirname(cwd)
 
         return cwd
