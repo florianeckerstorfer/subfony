@@ -1,15 +1,37 @@
 {
-    // Plugin settings
-
     // Path to the PHP executable
-    "php_bin": "/usr/bin/php",
+    "subfony_php_bin": "/usr/bin/php",
 
     // Path to the Symfony2 console executable (from the Symfony2 root directory)
-    "console_bin": "app/console",
+    "subfony_console_bin": "app/console",
 
     // Directory in the Symfony2 root directory to store bundles in
-    "src_dir": "src",
+    "subfony_src_dir": "src",
 
-    // Run assets:install command with --symlink option
-    "assets_install_symlink": false
+    // Whether to run assets:install command with --symlink option
+    "subfony_assets_install_symlink": false,
+
+    // Format of configuration files (php, xml, yml or annotation)
+    "subfony_bundle_format": "annotation",
+
+    // Whether to run generate:bundle with --structure option
+    "subfony_bundle_structure": false,
+
+    // Format of routes (php, xml, yml or annotation)
+    "subfony_route_format": "annotation",
+
+    // Format of templates (php or twig)
+    "subfony_template_format": "twig",
+
+    // Format of entities (php, xml, yml or annotation)
+    "subfony_entity_format": "annotation",
+
+    // Whether to run generate:doctrine:entity with the --with-repository option
+    "subfony_entity_with_repository": false,
+
+    // Whether to run generate:doctrine:crud with the --with-write option
+    "subfony_crud_with_write": true,
+
+    // Format of translations (php, xlf, po, mo, yml, ts, csv, ini and res)
+    "subfony_translation_format": "yml"
 }

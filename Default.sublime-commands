@@ -1,11 +1,11 @@
 [
     {
-        "caption": "Subfony: Generate Bundle",
-        "command": "subfony_generate_bundle"
+        "caption": "Subfony: Assetic Dump",
+        "command": "subfony_assetic_dump"
     },
     {
-        "caption": "Subfony: Generate Controller",
-        "command": "subfony_generate_controller"
+        "caption": "Subfony: Assets Install",
+        "command": "subfony_assets_install"
     },
     {
         "caption": "Subfony: Cache Clear",
@@ -16,15 +16,35 @@
         "command": "subfony_cache_warmup"
     },
     {
+        "caption": "Subfony: Generate Bundle",
+        "command": "subfony_generate_bundle"
+    },
+    {
+        "caption": "Subfony: Generate Controller",
+        "command": "subfony_generate_controller"
+    },
+    {
+        "caption": "Subfony: Generate Doctrine CRUD",
+        "command": "subfony_generate_doctrine_crud"
+    },
+    {
         "caption": "Subfony: Generate Doctrine Entities",
-        "command": "subfony_doctrine_generate_entities"
+        "command": "subfony_generate_doctrine_entities"
     },
     {
-        "caption": "Subfony: Assetic Dump",
-        "command": "subfony_assetic_dump"
+        "caption": "Subfony: Generate Doctrine Entity",
+        "command": "subfony_generate_doctrine_entity"
     },
     {
-        "caption": "Subfony: Assets Install",
-        "command": "subfony_assets_install"
+        "caption": "Subfony: Generate Doctrine Form",
+        "command": "subfony_generate_doctrine_form"
+    },
+    {
+        "caption": "Subfony: Update Translation",
+        "command": "subfony_translation_update"
+    },
+    {
+        "caption": "Subfony: Lint Twig",
+        "command": "subfony_twig_lint"
     }
 ]
